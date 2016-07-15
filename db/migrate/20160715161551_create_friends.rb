@@ -7,3 +7,15 @@ class CreateFriends < ActiveRecord::Migration
 		end
 	end
 end
+
+
+# User.all.each do |other_user| 
+
+
+
+# Friend.fing_by(user_id: current_user.id , friendship_id: other_user.id)
+
+# p "they are friends "
+
+
+# end 
