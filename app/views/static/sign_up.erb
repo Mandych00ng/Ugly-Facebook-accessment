@@ -1,0 +1,15 @@
+<div>
+<h2>Sign up for an account!</h2>
+	<form method=post action = "/signup">
+		<fieldset>
+			<label name="Full_Name">Full Name</label>
+			<input type =text name="user[name]"><br>
+			<label name="email">Email</label>
+			<input type =text placeholder="example123@example.com" name="user[email]"><br>
+			<label name="password">Password</label>
+			<input type =password placeholder="min 6 characters" name="user[password]"></br>
+			<input type=submit value="Sign up">
+		</fieldset>
+	</form>
+		<p><%= @msg %></p>
+</div>

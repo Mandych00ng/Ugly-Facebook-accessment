@@ -1,0 +1,7 @@
+<p>User</p>
+<h3><%= @user.name %></h3>
+<p>All Status</p>
+	<% @statuses.each do |s| %>
+	<a href="/statuses/<%=s.id%>"><%= s.status %></a>
+	<%= s.likes.count %>
+	<% end %>

@@ -1,0 +1,17 @@
+<h1>This is your dashboard</h1>
+<h2><%= @user.name %></h2>
+
+<p>All Status</p>
+	<% @statuses.each do |s| %>
+	<a href="/statuses/<%=s.id%>"><%= s.status %></a>
+	<%= s.likes.count %><br>
+	<form method=post action="/statuses/update/<%=s.id%>">
+		<input type=text placeholder="Update Status?" name="status_update">
+		<input type=submit value="Update">
+	</form>
+	
+	<form method=post action="/statuses/delete/<%=s.id%>">
+		<input type=hidden name="delete">
+		<input type=submit value="Delete">
+	</form>
+	<% end %>

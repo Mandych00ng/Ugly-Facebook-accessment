@@ -1,2 +1,16 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1 class="pagetitle">This is FaceBook!</h1>
+	<% if params[:error] %>
+	<p> You have not logged in!</p>
+	<% end %>
+
+	<form method=post action="/login">
+		<fieldset>
+		  <label name="email">Email</label>
+		  <input type="text" name="user[email]" /><br>
+		  <label name="password">Password</label>
+		  <input type="password" name="user[password]" />
+		  <input type="submit" value="Login" />
+		</fieldset>
+	</form>
+
+	<a href="/signup">No Account? Sign up HERE</a>
