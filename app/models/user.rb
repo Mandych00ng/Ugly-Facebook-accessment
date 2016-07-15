@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 	
 	has_many :statuses
 	has_many :likes
-
+	has_many :friends
+	
 	has_secure_password
 end
